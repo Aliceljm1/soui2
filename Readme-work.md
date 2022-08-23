@@ -7,7 +7,22 @@
 ## 布局文件相关 
 4.布局文件皮肤:xml\page_layout.xml 
 5.主窗口布局 ：\demo\uires\xml\dlg_main.xml
+6.初始化主窗口CMainDlg::OnInitDialog
 
 ## 类和控件说明
-1.静态文本控件SStatic, <text>	
-2.
+静态文本控件：SStatic, <text>	
+
+绘制SkiaPath路径的自定义控件类：SPathView
+
+渲染工厂类：SRenderFactory_Skia
+可以创建各种渲染对象：CreateRenderTarget，CreateBitmap，CreatePath，CreateFont
+
+渲染类：SRenderTarget_Skia
+渲染方法：DrawBitmap，DrawPath，DrawText
+
+## 其他核心方法
+查找控件方法
+	SWindow* SWindow::FindChildByName( LPCWSTR pszName , int nDeep)
+创建子控件
+	BOOL SWindow::CreateChildren(pugi::xml_node xmlNode)
+
