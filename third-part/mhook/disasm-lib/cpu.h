@@ -4,7 +4,7 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-#pragma pack(push,1)
+//#pragma pack(push,1), vs2019编译出错，需要注释此语句 remove by ljm 2022-8-23
 
 #include <windows.h>
 #include "misc.h"
